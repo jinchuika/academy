@@ -1,60 +1,67 @@
-%=======================02-713 LaTeX template, following the 15-210 template==================
-%
-% You don't need to use LaTeX or this template, but you must turn your homework in as
-% a typeset PDF somehow.
-%
-% How to use:
-%    1. Update your information in section "A" below
-%    2. Write your answers in section "B" below. Precede answers for all 
-%       parts of a question with the command "\question{n}{desc}" where n is
-%       the question number and "desc" is a short, one-line description of 
-%       the problem. There is no need to restate the problem.
-%    3. If a question has multiple parts, precede the answer to part x with the
-%       command "\part{x}".
-%    4. If a problem asks you to design an algorithm, use the commands
-%       \algorithm, \correctness, \runtime to precede your discussion of the 
-%       description of the algorithm, its correctness, and its running time, respectively.
-%    5. You can include graphics by using the command \includegraphics{FILENAME}
-%
 \documentclass[11pt]{article}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{graphicx}
 \usepackage[margin=1in]{geometry}
 \usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{5pt plus 1pt}
 \setlength{\headheight}{13.6pt}
-\newcommand\question[2]{\vspace{.25in}\hrule\textbf{#1: #2}\vspace{.5em}\hrule\vspace{.10in}}
+
+\newcommand{\hmwkTitulo}{Tarea\ \#2}
+\newcommand{\hmwkFechaEntrega}{01 de marzo de 2015}
+\newcommand{\hmwkCurso}{Investigación de Operaciones}
+\newcommand{\hmwkCursoSeccion}{Sección A}
+\newcommand{\hmwkCursoInstructor}{Ing. Juan Pérez}
+\newcommand{\hmwkNombreAutor}{Luis Carlos Contreras}
+\newcommand{\hmwkAuthorID}{1990-11-3887}
+
+\newcommand{\hmwkUniversidad}{Universidad Mariano Gálvez de Guatemala}
+\newcommand{\hmwkFacultad}{Ingeniería en Sistemas de Información}
+\newcommand{\hmwkSede}{Sede Chimaltenango}
+
+\author{\textbf{\hmwkNombreAutor}\\ \textbf{ \vspace{0.1in}\hmwkAuthorID}}
+\date{\hmwkFechaEntrega}
+
+\pagestyle{fancy}
+\lhead{\textbf{\hmwkNombreAutor}}
+\chead{\textbf}
+\rhead{\hmwkCurso}
+
+\title{
+	\textbf{\hmwkUniversidad} \\
+	\hmwkFacultad \\
+	\vspace{0.1in}\hmwkSede\\
+    \vspace{2.5in}
+    \textmd{\textbf{\hmwkTitulo}}\\
+    \vspace{0.1in}\large{\hmwkCurso , \textit{\hmwkCursoInstructor }}
+    \vspace{2.5in}
+}
+
+%Comandos para los problemas
+\newcommand\problema[2]{\vspace{.12in}\hrule\textbf{#1: #2}\vspace{.5em}\hrule\vspace{.10in}}
 \renewcommand\part[1]{\vspace{.10in}\textbf{(#1)}}
-\newcommand\algorithm{\vspace{.10in}\textbf{Algorithm: }}
-\newcommand\correctness{\vspace{.10in}\textbf{Correctness: }}
-\newcommand\runtime{\vspace{.10in}\textbf{Running time: }}
-\pagestyle{fancyplain}
-\lhead{\textbf{\NAME\ (\ANDREWID)}}
-\chead{\textbf{HW\HWNUM}}
-\rhead{02-713, \today}
-\begin{document}\raggedright
-%Section A==============Change the values below to match your information==================
-\newcommand\NAME{Carl Kingsford}  % your name
-\newcommand\ANDREWID{ckingsf}     % your andrew id
-\newcommand\HWNUM{1}              % the homework number
-%Section B==============Put your answers to the questions below here=======================
+\newcommand\planteamiento{\vspace{.10in}\textbf{Planteamiento: }}
+\newcommand\solucion{\vspace{.10in}\textbf{Solución: }}
+\newcommand\conclusion{\vspace{.10in}\textbf{Conclusión: }}
 
-% no need to restate the problem --- the graders know which problem is which,
-% but replacing "The First Problem" with a short phrase will help you remember
-% which problem this is when you read over your homeworks to study.
+\begin{document}
+\maketitle
+\pagebreak
 
-\question{1}{The First Problem} 
+\problema{1}{Problema 1}
 
-\part{a} \algorithm Describe algorithm here
+\planteamiento Planteamiento del problema. Puede durar absolutamente cualquier cantidad de texto.
 
-\correctness This is an argument  that this algorithm returns the correct answer.
+\part{a} Primer inciso
 
-\runtime Describe here, in big-Oh, the running time and your reasoning for it.
+\solucion De aquí en adelante empieza la solución
 
-\part{b}
+\conclusion En caso de que el problema pida alguna conclusión.
 
-\question{2}{The second problem}
+
+
+\problema{2}{Segundo problema}
 
 
 \end{document}
