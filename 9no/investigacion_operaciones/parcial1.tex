@@ -10,7 +10,7 @@
 \setlength{\headheight}{13.6pt}
 \graphicspath{parcial1src/}
 
-\newcommand{\hmwkTitulo}{Tarea\ \#2}
+\newcommand{\hmwkTitulo}{Parcial\ \#1}
 \newcommand{\hmwkFechaEntrega}{01 de marzo de 2015}
 \newcommand{\hmwkCurso}{Investigación de Operaciones}
 \newcommand{\hmwkCursoSeccion}{Sección A}
@@ -237,12 +237,13 @@ El resultado del sistema de ecuaciones es:
 \planteamiento
 Una conocida industria de calzado, lanza dos nuevos estilos en zapatos de seguridad industrial. El estilo R-metálico y el estilo R-seguridad. Se conoce que el estilo metálico aporta a las utilidades de la empresa Q.55.00 por unidad y que el estilo seguridad aporta Q.45.00 por unidad. El proceso general de la elaboración de los dos estilos conlleva tres fases dentro de la empresa; el departamento de troquelado, el de cosido y el de empaque. El estilo metálico requiere 0.30 horas en el primer departamento, 0.80 horas en el segundo y 0.50 horas en el tercero. El estilo seguridad requere 0.30 horas, 0.75 horas y 0.30 horas de producción en cada departamento, respectivamente. Las horas disponibles al mes son de 750 horas en troquelado, 1800 horas en cosido y 900 horas de empaque. Determine el volumen de producción óptimo de cada producto a fin de maximizar la utilidad total.
 
+\solucion
 
 \obj Maximizar la utilidad
 
 \begin{tabular}{|c|c|c|c|}
 \hline 
- & R-Metálico (M) & R-Reguridad (D) &  \\ 
+ & R-Metálico (M) & R-Seguridad (D) &  \\ 
 \hline 
 Traquelado & 0.3 hrs & 0.3 hrs & $\leq$ 750 \\ 
 \hline 
@@ -287,61 +288,98 @@ Una industria maquiladora dedicada a la confección de prendas de vestir para da
 \hline
 \textbf{Estilo prenda} & \textbf{Zig-Zag} & \textbf{Overclock} \\ \hline
 3000                   & 0.185 hrs/doc    & 0.238 hrs/docs     \\ \hline
-2025                   & 0.404            & 1.84 hrs/doc       \\ \hline
+2025                   & 0.404 hrs/doc    & 1.84 hrs/doc       \\ \hline
 \end{tabular}
 \end{table}
 
 La jornada laboral es de 8 horas diarias y se cuenta con tres máquinas de overclock y tres máquinas de zig-zag para la confección de prendas, las cuales funcionan simultáneamente cada día para producir las cantidades necesarias.
 
-\pagebreak
-\problema{13}{Ejercicio 13}
-\planteamiento
-Recientemente el departamento de mercadotecnia de una empresa productora de artículos para el hogar determinó que los dos principales productos de la empresa por el volumen de ventas que normalmente generan, estaban decreciendo en sus aportes de beneficios financieros. Por lo tanto, se estableció que el volumen de ventas del producto 1 es cuando menos el 60\% de las ventas totales de los dos productos. Ambos productos utilizan la misma materia prima, cuya disponibilidad está limitada a 100 libras. Ambos productos I y II utilizan esta materia prima a razón de 2 lbs/unidad y 4 lbs/unidad, respectivamente. El precio de venta de los dos productos es de \$.20.00 y \$.40.00 por unidad. ¿Qué cantidad de cada producto debe promocionar y vender el departamento de mercadeo y ventas para maximizar la utilidad?
+\solucion
 
-
-\obj Minimizar costo
+\obj Maximizar utilidad
 
 \begin{tabular}{|c|c|c|c|}
 \hline 
- & Maíz (M) & Harina de soya (H) &  \\ 
+ & Estilo 3000 (A)  & Estilo 2025 (B) &  \\ 
 \hline 
-Calcio & 0.01lb & 0.02lb & $\geq$ 1 \\ 
+Zig-Zag & 0.185hrs & 0.404hrs & $\geq$ 24 \\ 
 \hline 
-Proteína & 0.9lb & 0.6lb & $\geq$ 60 \\ 
-\hline 
-Fibra & 0.2lb & 0.6lb & $\leq$ 40 \\ 
+Overclock & 0.238hrs & 1.84hrs & $\geq$ 24 \\ 
 \hline 
 \end{tabular}
 
 \begin{table}[h]
 \begin{tabular}{ll}
-Función objetivo & $X_0 = 0.2M+0.6H$    \\
-Sujeto a:        & $0.01M + 0.02H \geq 1$ \\
-                 & $0.9M + 0.6H \geq 60$ \\
-                 & $0.2M + 0.6H \leq 40$ \\
-                 & $M,H \geq 0$    
+Función objetivo & $X_0 = A+B$    \\
+Sujeto a:        & $0.285A + 0.404B \leq 24$ \\
+                 & $0.238A + 1.84B \leq 24$ \\
+                 & $A,B \geq 0$    
 \end{tabular}
 \end{table}
 
 Por lo tanto:
 \begin{align*}
-X_0 - 0.2M - 0.6H &= 0\\
-0.01M + 0.02H &= 1\\
-0.9M + 0.6H &= 60\\
-0.2M + 0.6H &= 40
+X_0 - A - B &= 0\\
+0.285A + 0.404B = 24\\
+0.238A + 1.84B = 24
 \end{align*}
 
 El resultado de maximizar la función es:
 \begin{math}
-\mathbf{\left(\begin{array}{rrr}X_0=20&M=100&H=0\\\end{array}\right)}
+\mathbf{\left(\begin{array}{rrr}X_0=100.84&A=100.84&B=0\\\end{array}\right)}
 \end{math}
 
-\conclusion Se deben mezclar 20lb de maíz y 0lb de harina de soya para producir el alimento con menos costos de acuerdo a las restricciones. Esto generará un costo de Q.20.00.
+\conclusion Se puede deben producir 100.84 docenas del Panty Estilo 3000 y 0 del Baby Doll estilo 2025. Con ello se logrará una utilidad máxima de Q.100.84.
+
+\pagebreak
+\problema{13}{Ejercicio 13}
+\planteamiento
+Recientemente el departamento de mercadotecnia de una empresa productora de artículos para el hogar determinó que los dos principales productos de la empresa por el volumen de ventas que normalmente generan, estaban decreciendo en sus aportes de beneficios financieros. Por lo tanto, se estableció que el volumen de ventas del producto 1 es cuando menos el 60\% de las ventas totales de los dos productos. Ambos productos utilizan la misma materia prima, cuya disponibilidad está limitada a 100 libras. Ambos productos I y II utilizan esta materia prima a razón de 2 lbs/unidad y 4 lbs/unidad, respectivamente. El precio de venta de los dos productos es de \$.20.00 y \$.40.00 por unidad. ¿Qué cantidad de cada producto debe promocionar y vender el departamento de mercadeo y ventas para maximizar la utilidad?
+\solucion
+
+\obj Maximizar utilidad
+
+\begin{tabular}{|c|c|c|c|}
+\hline 
+ & Producto 1 (A)  & Producto II (B) &  \\ 
+\hline 
+Calcio & 0.01 lb & 0.02 lb & $\geq$ 1 \\ 
+\hline 
+Proteína & 0.9 lb & 0.6 lb & $\geq$ 60 \\ 
+\hline 
+Fibra & 0.2 lb & 0.6 lb & $\leq$ 40 \\ 
+\hline 
+\end{tabular}
+
+\begin{table}[h]
+\begin{tabular}{ll}
+Función objetivo & $X_0 = 20A+40B$    \\
+Sujeto a:        & $0.01A + 0.02B \geq 1$ \\
+                 & $0.9A + 0.6B \geq 60$ \\
+                 & $0.2A + 0.6B \leq 40$ \\
+                 & $A,B \geq 0$    
+\end{tabular}
+\end{table}
+
+Por lo tanto:
+\begin{align*}
+X_0 - 20A - 40B &= 0\\
+0.01A + 0.02B &= 1\\
+0.9A + 0.6B &= 60\\
+0.2A + 0.6B &= 40
+\end{align*}
+
+El resultado de maximizar la función es:
+\begin{math}
+\mathbf{\left(\begin{array}{rrr}X_0=25&A=0&B=1000\\\end{array}\right)}
+\end{math}
+
+\conclusion Se deben producir 25 unidades del producto I y 0 unidades del producto II para alcanzar la utilidad máxima de Q.1000.00.
 
 \pagebreak
 \problema{15}{Ejercicio 15}
 \planteamiento
-Un agricultor de un área rural, se dedica a la crianza de cerdos que consumen una mezvla especial de comida todos los días. El alimento puede prepararse con maíz y harina de soya de acuerdo a la siguiente descripción: Cada libra de maíz contiene: 0.01 lb. de calcio, 0.9 lb. de proteína y 0.2 lb de fibra. Cada libra de harina de soya contiene 0.02lb de calcio, 0.6 lb de proteína y 0.6lb de fibra. El costo por cada libra de maíz es de Q.0.20 y por cada libra de harina de soya es de Q.0.60. Los requsisitos diarios de alimentación de cada cerdo son: al menos 1\% de calcio, al menos 60\% de proteína y máximo 40\% de fibra. Determine la mezcla de alimentos por cada cerdo con el mínimo costo diario.
+Un agricultor de un área rural, se dedica a la crianza de cerdos que consumen una mezcla especial de comida todos los días. El alimento puede prepararse con maíz y harina de soya de acuerdo a la siguiente descripción: Cada libra de maíz contiene: 0.01 lb. de calcio, 0.9 lb. de proteína y 0.2 lb de fibra. Cada libra de harina de soya contiene 0.02lb de calcio, 0.6 lb de proteína y 0.6lb de fibra. El costo por cada libra de maíz es de Q.0.20 y por cada libra de harina de soya es de Q.0.60. Los requsisitos diarios de alimentación de cada cerdo son: al menos 1\% de calcio, al menos 60\% de proteína y máximo 40\% de fibra. Determine la mezcla de alimentos por cada cerdo con el mínimo costo diario.
 
 \solucion
 \obj Minimizar costo
@@ -350,11 +388,11 @@ Un agricultor de un área rural, se dedica a la crianza de cerdos que consumen u
 \hline 
  & Maíz (M) & Harina de soya (H) &  \\ 
 \hline 
-Calcio & 0.01lb & 0.02lb & $\geq$ 1 \\ 
+Calcio & 0.01 lb & 0.02 lb & $\geq$ 1 \\ 
 \hline 
-Proteína & 0.9lb & 0.6lb & $\geq$ 60 \\ 
+Proteína & 0.9 lb & 0.6 lb & $\geq$ 60 \\ 
 \hline 
-Fibra & 0.2lb & 0.6lb & $\leq$ 40 \\ 
+Fibra & 0.2 lb & 0.6 lb & $\leq$ 40 \\ 
 \hline 
 \end{tabular}
 
